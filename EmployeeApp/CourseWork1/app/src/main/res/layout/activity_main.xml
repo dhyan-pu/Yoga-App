@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/header" />
+
+    <Button
+        android:id="@+id/btnViewSchedules"
+        android:layout_width="338dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="110dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/view_the_courses"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3"
+        tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/btnAddSchedules"
+        android:layout_width="338dp"
+        android:layout_height="142dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/add_a_course"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewSchedules"
+        app:layout_constraintVertical_bias="0.241"
+        tools:ignore="VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

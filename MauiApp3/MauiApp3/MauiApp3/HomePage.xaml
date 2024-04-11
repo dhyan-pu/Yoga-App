@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.HomePage"
+             Title="HomePage"
+            SelectedTabColor="Red"
+            UnselectedTabColor="DarkBlue"
+            BarBackgroundColor="Gray">
+
+    <ContentPage Title="Home" IconImageSource="home.png"  NavigationPage.HasNavigationBar="False">
+        <ScrollView>
+            <StackLayout>
+                <SearchBar x:Name="searchBar" Placeholder="Search" SearchButtonPressed="SearchButton_Pressed"/>
+                <CollectionView x:Name="collectionView" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".4*"/>
+                                        <ColumnDefinition Width=".8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding ImageUrl}" Grid.Column="0" Grid.Row="0" Aspect="AspectFit"/>
+                                    <VerticalStackLayout Grid.Column="1" Grid.Row="0" Padding="5" VerticalOptions="Center">
+                                        <Label Text="{Binding TeacherName}" TextColor="Black"  FontSize="Medium" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Date}" TextColor="Black" FontAttributes="Italic"/>
+                                        <Button Text="ADD TO CART" TextColor="White" FontSize="Large" FontAttributes="Bold" BackgroundColor="Black" Clicked="Add_To_Cart"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage>
+    <ContentPage x:Name="cartPage" Title="Cart" IconImageSource="cart.png"  NavigationPage.HasNavigationBar="False">
+        <StackLayout x:Name="cartItemsLayout">
+            
+        </StackLayout>
+    </ContentPage>
+    
+</TabbedPage>

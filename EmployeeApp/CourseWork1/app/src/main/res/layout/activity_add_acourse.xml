@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#090C42"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/add_a_course"
+            android:textAlignment="center"
+            android:textColor="#B6A720"
+            android:textSize="@dimen/_30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTypeOfClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/type_of_class"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+
+        <EditText
+            android:id="@+id/edtTypeOfClass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:autofillHints=""
+            android:background="@drawable/textinputxml"
+            android:hint="@string/eg_flow_yoga"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTypeOfClass"
+            tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/txtTimeOfCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/time_of_course"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTypeOfClass" />
+
+        <TextView
+            android:id="@+id/txtDayOfTheWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/day_of_the_week"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtStart" />
+
+        <Spinner
+            android:id="@+id/spnDayOfTheWeek"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textinputxml"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:spinnerMode="dropdown"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDayOfTheWeek"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/capacity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnDayOfTheWeek" />
+
+        <EditText
+            android:id="@+id/edtCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="27dp"
+            android:autofillHints=""
+            android:background="@drawable/textinputxml"
+            android:ems="4"
+            android:gravity="center"
+            android:hint="@string/edtCapacity"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textColor="@color/white"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintLeft_toRightOf="@+id/txtCapacity"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnDayOfTheWeek"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/txtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="@string/duration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCapacity" />
+
+        <TextView
+            android:id="@+id/txtPricePerClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/price_per_class"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDuration" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/description"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPricePerClass" />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints=""
+            android:background="@drawable/textinputxml"
+            android:inputType="textMultiLine"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription"
+            tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/txtStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeOfCourse" />
+
+        <EditText
+            android:id="@+id/edtStart"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:background="@drawable/textinputxml"
+            android:ems="4"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/_00_00"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/txtStart"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeOfCourse"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/txtEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_25sp"
+            app:layout_constraintStart_toEndOf="@+id/edtStart"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeOfCourse" />
+
+        <EditText
+            android:id="@+id/edtEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints=""
+            android:background="@drawable/textinputxml"
+            android:ems="4"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/_00_00"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtEnd"
+            app:layout_constraintTop_toBottomOf="@+id/txtTimeOfCourse"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceContainer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="-100dp"
+            android:layout_marginTop="-10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtPricePerClass"
+            app:layout_constraintTop_toBottomOf="@+id/durationContainer"
+            app:prefixText="@string/pound">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPricePerClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textinputxml"
+                android:inputType="number"
+                android:textColor="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/durationContainer"
+            android:layout_width="85dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="-500dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.744"
+            app:layout_constraintStart_toEndOf="@+id/txtDuration"
+            app:layout_constraintTop_toBottomOf="@+id/edtCapacity"
+            app:suffixText="@string/min">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textinputxml"
+                android:inputType="number"
+                android:textColor="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        x
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

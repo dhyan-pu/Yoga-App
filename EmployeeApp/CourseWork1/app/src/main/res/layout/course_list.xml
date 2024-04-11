@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-500dp"
+        app:cardCornerRadius="@dimen/_16sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtClsName"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:autofillHints="no"
+                android:background="@color/black"
+                android:text="@string/type_of_class"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="LabelFor,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtDayOfTheWeek"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:autofillHints="no"
+                android:background="@color/black"
+                android:hint="@string/day"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtClsName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtViewOptions"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-7dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/_8942"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtDur"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/duration"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtClsName"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtStartAt"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/start"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDur"
+                tools:ignore="TextContrastCheck" />
+
+
+            <TextView
+                android:id="@+id/txtCap"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/capacity"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStartAt"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtPricePCls"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="60dp"
+                android:text="@string/price"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDayOfTheWeek"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/txtDes"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/description"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPricePCls" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

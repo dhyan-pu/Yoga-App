@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Employee app</string>
+    <string name="add_a_course">ADD A COURSE</string>
+    <string name="type_of_class">Type of class</string>
+    <string name="time_of_course">Time of course</string>
+    <string name="day_of_the_week">Day of the week</string>
+    <string name="capacity">Capacity:</string>
+    <string name="edtCapacity">capacity</string>
+    <string name="duration">Duration :</string>
+    <string name="price_per_class">Price per class :</string>
+    <string name="description">Description</string>
+    <string name="start">Start :</string>
+    <string name="_00_00">00:00</string>
+    <string name="end">End :</string>
+    <string name="add">ADD</string>
+    <string name="_60min">60min</string>
+    <string name="view_the_courses">View The Courses</string>
+    <string name="sm9669f">sm9669f</string>
+    <string name="price">Price:</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="day">Day</string>
+    <string name="view_classes">View Classes</string>
+    <string name="add_class">Add Class</string>
+    <string name="min">min</string>
+    <string name="pound">£</string>
+    <string name="_8942">⋮</string>
+    <string name="date">Date</string>
+    <string name="name">name</string>
+    <string name="additional_comments">Additional Comments:</string>
+    <string name="teacher_name">Teacher Name:</string>
+    <string name="Date">Date:</string>
+    <string name="add_a_class">ADD A CLASS</string>
+    <string name="enter_teacher_s_name">Enter Teacher\'s Name:</string>
+    <string name="todo">TODO</string>
+    <string name="update">Update</string>
+    <string name="update_course">Update Course</string>
+    <string name="pick_a_date">Pick A Date: </string>
+    <string name="eg_flow_yoga">eg: Flow yoga</string>
+    <string name="choose_an_image">Choose An image:</string>
+
+    <string-array name="dayOfTheWeek">
+        <item>Choose A Day</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
+</resources>
